@@ -32,8 +32,11 @@ passport.use(
                 const idpass = await identificador[0].id_usu;
                 const namepass = await nombre[0].nom_usu;
 
-                if (username == User[0].cor_usu && password == pass[0].con_usu)
+                if (username == User[0].cor_usu && password == pass[0].con_usu){
                     return done(null, { id: idpass, name: namepass });
+                }else{
+                    done(null, false);
+                }
             } catch (error) {
                 done(null, false);
             }
@@ -62,7 +65,7 @@ passport.deserializeUser(async (id, done) => {
 router.post(
     "/login",
     passport.authenticate("local", {
-        successRedirect: "/Misgrupos",
+        successRedirect: "/carrito",
         failureRedirect: "/login",
     })
 );

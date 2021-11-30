@@ -18,7 +18,7 @@
     <div class="principal">
         <h1 class="centro">Iniciar Sesión</h1>
         <div class="contenedor-formulario">
-            <form method="get" id="LoginForm" name="LoginForm" action="/carrito">
+            <form method="post" id="LoginForm" name="LoginForm">
                 <p class="seccion">Correo Electrónico</p>
                 <input placeholder="Correo Electrónico" type="email" id="inputemail" name="username">
                 <p class="rojo" id="msgerror1"></p>
@@ -28,7 +28,7 @@
 
                 <br><br>
                 <div class="contenedor-boton">
-                    <input class="b" type="submit" value='Acceder'><!--onclick="ValidarLogin(event)"--> 
+                    <input class="b" type="submit" value='Acceder' onclick="ValidarLogin(event)" > 
                 </div>
                 <p>¿No tienes una cuenta? 
                     <a href="/sign-up"><b>
